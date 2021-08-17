@@ -1,0 +1,13 @@
+.logo {
+  width: 75px;
+
+  @include desktop {
+    width: 150px;
+  }
+
+  &--footer {
+    width: 190px;
+    margin-bottom: 2.2em;
+    padding-left: 0.5em;
+  }
+}

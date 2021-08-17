@@ -1,0 +1,26 @@
+.contact {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 1em;
+
+  &__img {
+    margin-top: 5px;
+  }
+
+  &__text {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 0.95rem;
+    line-height: 1.5rem;
+
+    @include desktop {
+      padding-right: 6em;
+    }
+  }
+
+  &:last-of-type {
+    margin-bottom: 5em;
+  }
+}

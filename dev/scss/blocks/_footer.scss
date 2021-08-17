@@ -1,0 +1,18 @@
+.footer {
+  background-color: var(--DarkBlueFooter);
+  padding: 16em 2em 2em;
+  text-align: left;
+
+  & .contact:nth-child(2) .contact__img {
+    margin-top: 10px;
+  }
+
+  @include desktop {
+    padding: 12em 7em 2em;
+
+    .footer__content {
+      display: grid;
+      grid-template-columns: 470px 300px 150px 150px 1fr;
+    }
+  }
+}

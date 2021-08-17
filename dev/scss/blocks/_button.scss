@@ -1,0 +1,44 @@
+.button {
+  display: inline-block;
+  padding: 1em 4.5em;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: var(--headings-font);
+  color: var(--White);
+  text-decoration: none;
+  border-radius: 30px;
+
+  &--cyan {
+    background: linear-gradient(
+      to right,
+      rgb(101, 226, 217) -60%,
+      rgb(51, 158, 204) 130%
+    );
+  }
+
+  &--cyan2 {
+    background: linear-gradient(
+      to right,
+      rgb(101, 226, 217) -60%,
+      rgb(51, 158, 204) 130%
+    );
+    font-size: 0.9rem;
+    border: none;
+
+    @include desktop {
+      width: 200px;
+      padding: 1em;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  @include desktop {
+    &--cyan:hover,
+    &--cyan2:hover {
+      background: var(--CyanGradient);
+    }
+  }
+}

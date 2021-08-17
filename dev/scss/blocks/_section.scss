@@ -1,0 +1,152 @@
+.article {
+  margin-bottom: 11em;
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    width: 79%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5em;
+  }
+
+  & .section {
+    margin-bottom: 4.5em;
+
+    &__img {
+      width: 62px;
+      margin-bottom: 0.9em;
+    }
+
+    &__title {
+      font-size: 1.2rem;
+      margin-bottom: 0.7em;
+    }
+
+    &__text {
+      font-size: 0.85rem;
+      line-height: 1.4rem;
+    }
+
+    @include desktop {
+      width: 72%;
+
+      &:first-of-type img {
+        margin-top: 1.5em;
+      }
+    }
+  }
+}
+
+.section-productive {
+  margin-bottom: 11em;
+  text-align: left;
+
+  &__img {
+    margin-bottom: 2em;
+  }
+
+  &__title {
+    font-size: 1.1rem;
+  }
+
+  &__text {
+    font-size: 0.85rem;
+    line-height: 1.4rem;
+  }
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    width: 125px;
+    padding-bottom: 5px;
+    font-size: 0.7rem;
+    color: var(--CyanGradient);
+    text-decoration: none;
+    border-bottom: 1px solid var(--CyanGradient);
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url("../assets/images/icon-arrow.svg");
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 15px;
+  }
+
+  @include desktop {
+    display: flex;
+    align-items: center;
+
+    &__img {
+      margin-left: 2em;
+    }
+
+    &__info {
+      margin-left: 4em;
+    }
+
+    &__title {
+      margin-bottom: 0.5em;
+      font-size: 2.2rem;
+      width: 50%;
+    }
+
+    &__text {
+      letter-spacing: 0.5px;
+      width: 90%;
+    }
+
+    &__link:hover {
+      color: var(--White);
+      border-bottom: 1px solid var(--White);
+
+      & span {
+        filter: sepia(4%) saturate(0%) hue-rotate(286deg) brightness(102%)
+          contrast(102%);
+      }
+    }
+  }
+}
+
+.section-card {
+  position: relative;
+  padding: 0 1em;
+  margin-bottom: 20em;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../assets/images/bg-quotes.png");
+    background-repeat: no-repeat;
+    background-size: 30px 25px;
+    width: 30px;
+    height: 25px;
+    top: -24px;
+    left: 25px;
+  }
+
+  @include desktop {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 350px);
+    column-gap: 35px;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 10;
+
+    &::before {
+      z-index: -1;
+      background-size: 55px 45px;
+      width: 55px;
+      height: 45px;
+      top: -35px;
+      left: 9px;
+    }
+  }
+}

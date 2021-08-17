@@ -1,0 +1,14 @@
+.sitemap {
+  @include reset-list;
+  margin-bottom: 3em;
+
+  &__item {
+    margin-bottom: 1em;
+  }
+
+  &__link {
+    font-size: 1rem;
+    color: var(--White);
+    text-decoration: none;
+  }
+}

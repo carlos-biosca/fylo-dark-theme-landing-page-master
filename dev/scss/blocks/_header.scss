@@ -1,0 +1,83 @@
+.header {
+  background-color: var(--DarkBlueIntro);
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  padding: 2.5em 1.5em 3em;
+
+  @include desktop {
+    padding: 3em 5em;
+  }
+}
+
+.banner {
+  font-size: 12px;
+  background-image: url("../assets/images/bg-curvy-mobile.svg");
+  background-repeat: no-repeat;
+  background-position-y: 45%;
+
+  @include desktop {
+    margin-top: 5em;
+    background-image: url("../assets/images/bg-curvy-desktop.svg");
+    background-position-y: 106%;
+  }
+
+  &__img {
+    padding: 0 2em 2em;
+
+    @include desktop {
+      padding-bottom: 3em;
+    }
+  }
+
+  &__title {
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      transparent 45%,
+      rgb(24, 31, 42) 45%,
+      rgb(24, 31, 42) 100%
+    );
+    padding: 0 1em 0.7em;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 2.5rem;
+
+    @include desktop {
+      width: 65%;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 2.5rem;
+      line-height: 3rem;
+      background: none;
+    }
+  }
+
+  &__info {
+    background-color: var(--DarkBlueMain);
+    padding-bottom: 11em;
+
+    @include desktop {
+      background-color: unset;
+      padding-bottom: 14em;
+    }
+  }
+
+  &__text {
+    margin-top: 0;
+    margin-bottom: 2em;
+    padding: 0 42px;
+    font-size: 14px;
+    line-height: 1.4rem;
+
+    @include desktop {
+      width: 45%;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 19px;
+      line-height: 2rem;
+    }
+  }
+}

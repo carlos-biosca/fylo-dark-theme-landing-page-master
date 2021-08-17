@@ -1,0 +1,76 @@
+.aside {
+  position: absolute;
+  bottom: -490px;
+  left: 16px;
+  width: 340px;
+  padding: 1.5em 1.5em 2.4em;
+  background-color: var(--DarkBlueIntro);
+  border-radius: 10px;
+  box-shadow: 3px 5px 10px rgba($color: #000000, $alpha: 0.25);
+
+  @include desktop {
+    width: 850px;
+    left: calc(50% - 850px / 2);
+    bottom: -433px;
+    padding-bottom: 1.4em;
+  }
+
+  &__title {
+    font-size: 1.2rem;
+
+    @include desktop {
+      font-size: 2rem;
+      margin-bottom: 0.7em;
+    }
+  }
+
+  &__text {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+    margin-bottom: 2em;
+
+    @include desktop {
+      padding: 0 4em;
+      margin-bottom: 2.5em;
+    }
+  }
+
+  &__input {
+    height: 45px;
+    width: 268px;
+    border: none;
+    outline: none;
+    padding: 1.1em 2em 0.9em;
+    margin-bottom: 1.5em;
+    border-radius: 30px;
+
+    &::placeholder {
+      color: rgb(219, 219, 219);
+      font-size: 0.7rem;
+    }
+
+    @include desktop {
+      position: relative;
+      width: 475px;
+      margin-right: 2em;
+
+      &::placeholder {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  &__error {
+    display: none;
+
+    @include desktop {
+      position: absolute;
+      display: inline;
+      left: 97px;
+      bottom: 20px;
+      color: #ec5f5f;
+      font-size: 0.8rem;
+      opacity: 0;
+    }
+  }
+}

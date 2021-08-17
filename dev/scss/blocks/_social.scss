@@ -1,0 +1,29 @@
+.social {
+  @include reset-list;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+
+  &__item {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg)
+      brightness(103%) contrast(103%);
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 4px 0px 0px 8px;
+    margin-right: 12px;
+    width: 30px;
+    height: 30px;
+
+    @include desktop {
+      &:hover {
+        filter: invert(84%) sepia(57%) saturate(387%) hue-rotate(108deg)
+          brightness(91%) contrast(93%);
+      }
+    }
+  }
+
+  & img {
+    width: 13px;
+    height: 13px;
+  }
+}

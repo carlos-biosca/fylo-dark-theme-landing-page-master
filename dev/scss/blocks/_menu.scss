@@ -1,0 +1,29 @@
+.main-nav {
+  margin-left: auto;
+  width: 55%;
+
+  @include desktop {
+    width: 270px;
+  }
+}
+
+.main-menu {
+  @include reset-list;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--headings-font);
+
+  &__link {
+    color: var(--White);
+    text-decoration: none;
+    font-size: 0.8rem;
+
+    @include desktop {
+      font-size: 1rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

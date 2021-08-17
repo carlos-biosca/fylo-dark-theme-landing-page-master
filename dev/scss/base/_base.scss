@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: black;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 375px;
+  background-color: var(--DarkBlueMain);
+  font-family: "Open Sans", sans-serif;
+  color: var(--White);
+  text-align: center;
+
+  @include desktop {
+    max-width: 1440px;
+  }
+}
+
+.main {
+  padding: 0 2em;
+  position: relative;
+
+  @include desktop {
+    padding: 0 5em;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--headings-font);
+}
+
+img {
+  max-width: 100%;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+
+  & a {
+    color: hsl(228, 45%, 44%);
+  }
+
+  @include desktop {
+    font-size: 16px;
+  }
+}
